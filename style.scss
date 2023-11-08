@@ -1,0 +1,562 @@
+@import url("https://fonts.googleapis.com/css2?family=Bellota:wght@700&family=Gurajada&display=swap");
+
+$preto: #171717;
+$pretoTansparente: #17171767;
+$branco: #f7f7f7;
+$bgEscuro: #1a529b;
+$bgClaro: #2880f2;
+
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  color: $branco;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  header {
+    height: calc(fit-content + 16px);
+    justify-content: space-between;
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+    z-index: 1000000;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    transition: 0.5s;
+    * {
+      margin: 10px;
+    }
+    div {
+      display: inline-flex;
+      width: fit-content;
+    }
+    div:nth-child(1) {
+      img {
+        height: 85px;
+        width: fit-content;
+        cursor: pointer;
+      }
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: fit-content;
+        h3 {
+          margin: 5px;
+        }
+        span {
+          display: inline-flex;
+          height: fit-content;
+          align-items: center;
+          margin: 0;
+          p {
+            display: flex;
+            align-items: center;
+            margin: 0 10px 0 10px;
+            font-size: 40px;
+            height: 40px;
+          }
+          img {
+            height: 25px;
+            margin: 0;
+          }
+          img:nth-child(3) {
+            transform: rotateY(180deg);
+          }
+        }
+      }
+    }
+    div:nth-child(2) {
+      button.imgButton {
+        background-color: transparent;
+        padding: 0;
+        img {
+          width: fit-content;
+          margin: 0;
+        }
+      }
+      button {
+        height: fit-content;
+        background-color: $bgClaro;
+      }
+      button,
+      img {
+        height: 60px;
+        border-radius: 16px;
+      }
+    }
+  }
+
+  section:nth-child(2) {
+    background: radial-gradient(
+      100% 100% at 50% 100%,
+      #2880f2 0%,
+      #103463 100%
+    );
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    display: inline-flex;
+    justify-content: space-around;
+    padding-bottom: 20px;
+    img {
+      height: 400px;
+    }
+    div {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      background-color: $pretoTansparente;
+      padding: 20px;
+      border-radius: 16px;
+      width: fit-content;
+      * {
+        margin: 10px 0 10px 0;
+      }
+      p {
+        width: 600px;
+      }
+      button {
+        background-color: $bgClaro;
+      }
+    }
+  }
+
+  #nuvem {
+    position: absolute;
+    overflow: hidden;
+    width: calc(100% + 6vw);
+    height: 300px;
+    background-size: auto 100%, auto 100%;
+    background-repeat: repeat-x, repeat-x;
+    background-position: 900px, center;
+    background-image: url(imagens/nuvens.png), url(imagens/nuvens.png);
+    transform: translateX(-6vw) translateY(-150px);
+  }
+
+  section:nth-child(4) {
+    padding-top: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 130px;
+    align-items: center;
+    background-image: linear-gradient(#2474da 0%, #2880f2 23.91%, #3ab8ff 100%);
+    background-size: cover;
+    width: 100%;
+    height: fit-content;
+
+    div:nth-child(1) {
+      width: 100%;
+      height: fit-content;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+    }
+  }
+
+  #passaros {
+    overflow: hidden;
+    width: 100%;
+    height: 120px;
+    background-size: auto 100%;
+    background-repeat: repeat-x;
+    background-position: 140px;
+    background-image: url(imagens/passaro.png);
+  }
+  #celularesDiv {
+    width: 100%;
+    height: fit-content;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+  #textinho {
+    background-color: $pretoTansparente;
+    padding: 20px;
+    border-radius: 16px;
+    width: 650px;
+    gap: 20px;
+  }
+  #celulares {
+    width: 100%;
+    justify-content: space-evenly;
+    display: inline-flex;
+    .celular {
+      height: 600px;
+      width: fit-content;
+      padding: 20px;
+      border-radius: 16px;
+    }
+  }
+  #praia {
+    user-select: none;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 9vh;
+    height: fit-content;
+    position: relative;
+    #praiaImg {
+      width: 100%;
+    }
+    #carrinho {
+      right: -9vw;
+      bottom: 15vh;
+      width: fit-content;
+      position: absolute;
+      height: fit-content;
+      animation: carrinho 9s normal 0s infinite forwards linear;
+
+      img {
+        width: 9vw;
+      }
+    }
+
+    @keyframes carrinho {
+      0% {
+        right: -9vw;
+        bottom: 47%;
+      }
+      10% {
+        bottom: 41%;
+      }
+      18% {
+        bottom: 32%;
+        transform: rotateZ(-16deg);
+      }
+      32% {
+        bottom: 1.5%;
+        transform: rotateZ(-12deg);
+      }
+      36% {
+        bottom: -1%;
+        transform: rotateZ(0deg);
+      }
+      50% {
+        bottom: -1%;
+        transform: rotateZ(0deg);
+      }
+      54% {
+        bottom: -1%;
+        transform: rotateZ(8deg);
+      }
+      64% {
+        bottom: 10%;
+        transform: rotateZ(10deg);
+      }
+      70% {
+        bottom: 14%;
+        transform: rotateZ(6deg);
+      }
+      74% {
+        bottom: 15%;
+      }
+      75% {
+        bottom: 14%;
+        transform: rotateZ(-7deg);
+      }
+      81% {
+        bottom: 8.5%;
+        transform: rotateZ(-10deg);
+      }
+      85% {
+        bottom: 5.5%;
+        transform: rotateZ(-8deg);
+      }
+      90% {
+        bottom: -1%;
+        transform: rotateZ(0deg);
+      }
+      100% {
+        right: 100vw;
+        bottom: -1%;
+        transform: rotateZ(0deg);
+      }
+    }
+  }
+
+  footer {
+    margin-top: -5px;
+    width: 100%;
+    height: fit-content;
+    min-height: 50px;
+    background-color: #fbf0b2;
+  }
+  #scrollArrow {
+    width: 1.5vw;
+    right: 20px;
+    height: 7vh;
+    bottom: 20px;
+    padding: 20px;
+    cursor: pointer;
+    position: fixed;
+    transition: 0.2s;
+    user-select: none;
+    border-radius: 8px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(imagens/down-long-solid.svg);
+    @keyframes setaPulandoC {
+      to {
+        transform: translateY(-30%) scaleY(70%) rotateX(0deg);
+      }
+    }
+    @keyframes setaPulandoB {
+      to {
+        transform: translateY(30%) scaleY(70%) rotateX(180deg);
+      }
+    }
+  }
+  .arrowAnimate {
+    transform: rotateX(0deg);
+    animation: setaPulandoC 0.5s alternate 0s infinite forwards ease-in;
+    animation-play-state: running;
+  }
+
+  #fundo {
+    position: fixed;
+    background-color: $pretoTansparente;
+    backdrop-filter: blur(3px);
+    top: 0;
+    left: 0;
+    z-index: 10000000;
+    display: none;
+    // display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    #cadastro {
+      width: 800px;
+      height: fit-content;
+      padding: 50px;
+      border-radius: 16px;
+      background: radial-gradient(
+        100% 100% at 50% 100%,
+        #45ddff 0%,
+        #2066c2 100%
+      );
+      #headerCadastro {
+        width: 100%;
+        align-items: center;
+        display: inline-flex;
+        justify-content: space-between;
+        div {
+          display: inline-flex;
+          align-items: center;
+          gap: 20px;
+          #cadastroLogo {
+            width: 85px;
+          }
+        }
+        div#fecharCadastro {
+          width: 50px;
+          height: 50px;
+          position: relative;
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          div {
+            width: 100%;
+            height: 5px;
+            position: absolute;
+            background-color: $branco;
+            border-radius: 10px;
+          }
+          #div1 {
+            transform: rotateZ(45deg);
+          }
+          #div2 {
+            transform: rotateZ(-45deg);
+          }
+        }
+      }
+      form {
+        * {
+          font-family: "Gurajada";
+        }
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        div {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          margin: 20px;
+          span {
+            display: inline-flex;
+            flex-direction: row;
+            width: fit-content;
+            position: relative;
+            align-items: center;
+          }
+          label {
+            font-family: "Bellota";
+            font-size: x-large;
+            transform: translateX(16px) translateY(-5px);
+          }
+          input {
+            color: $preto;
+            height: fit-content;
+            font-size: x-large;
+            width: 300px;
+            padding: 0 20px;
+            border-radius: 16px;
+            outline: none;
+          }
+          #errorEmail,
+          #errorRepetirSenha,
+          #errorSenha {
+            display: none;
+            color: red;
+            font-family: "Bellota";
+            border: 2px red solid;
+            border-top: none;
+            background-color: white;
+            padding: 0 5px;
+            border-radius: 0 0 10px 10px;
+            z-index: 100000000000;
+            font-size: large;
+            position: absolute;
+            bottom: -21.5px;
+            left: 16px;
+          }
+          #senha,
+          #repetirSenha {
+            width: 270px;
+            padding-left: 20px;
+            padding-right: 50px;
+            caret-color: #2880f2;
+          }
+          img {
+            height: 25px;
+            cursor: pointer;
+            position: absolute;
+            right: 10px;
+          }
+        }
+        input[type="submit"] {
+          margin: 20px;
+          width: 200px;
+          height: fit-content;
+          font-size: x-large;
+          border-radius: 16px;
+        }
+        input[type="submit"]:disabled {
+          cursor: not-allowed;
+          background-color: $branco;
+          color: $bgClaro;
+        }
+        input[type="submit"]:enabled {
+          background-color: $bgClaro;
+          color: white;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  #fundo2 {
+    position: fixed;
+    background-color: $pretoTansparente;
+    backdrop-filter: blur(3px);
+    top: 0;
+    left: 0;
+    z-index: 1000000000000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    #errCadastro {
+      width: 500px;
+      height: fit-content;
+      padding: 50px;
+      border-radius: 16px;
+      background: radial-gradient(
+        100% 100% at 50% 100%,
+        $bgEscuro 0%,
+        $preto 100%
+      );
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 30px;
+      h1 {
+        width: fit-content;
+        font-family: "Bellota";
+        font-size: xx-large;
+        text-align: center;
+      }
+      img {
+        width: 105px;
+      }
+      button {
+        background-color: $preto;
+      }
+    }
+  }
+
+  video {
+    width: 70vw;
+    background-color: $bgEscuro;
+    border: 0.4vw solid $bgEscuro;
+    border-radius: 2%;
+  }
+
+  h3 {
+    font-family: "Bellota";
+    font-size: xx-large;
+    width: fit-content;
+    margin: 0;
+  }
+  p {
+    font-family: "Gurajada";
+    font-weight: 100;
+    font-size: xx-large;
+    line-height: 120%;
+    text-align: center;
+    letter-spacing: 0.3px;
+    word-spacing: 1px;
+  }
+  button {
+    color: $branco;
+    font-size: xx-large;
+    border-radius: 16px;
+    padding: 0 25px 0 25px;
+    font-family: "Gurajada";
+    transition: 0.2s ease-out;
+  }
+  button:hover,
+  input[type="submit"]:enabled:hover {
+    transform: translateX(-2px) translateY(-2px);
+    box-shadow: 2px 2px 4px 0 $pretoTansparente;
+    transition: 0.2s ease-in;
+    cursor: pointer;
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.upArrow {
+  transform: rotateX(180deg);
+  animation: setaPulandoB 0.5s alternate 0s infinite forwards ease-in;
+  animation-play-state: running;
+}

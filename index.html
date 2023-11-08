@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="imagens/app-icon.png" type="image/x-icon" />
+    <script src="script.js" defer></script>
+    <title>KitByte</title>
+  </head>
+  <body>
+    <header id="header">
+      <div>
+        <img src="imagens/kit logo.png" alt="logo" id="headerLogo"/>
+        <div>
+          <h3>Bem vindo(a) a</h3>
+          <span>
+            <img src="imagens/enfeiteLogo.png" alt="enfeite da logo 1" />
+            <p>KitByte</p>
+            <img src="imagens/enfeiteLogo.png" alt="enfeite da logo 2" />
+          </span>
+        </div>
+      </div>
+      <div>
+        <button class="imgButton">
+          <img src="imagens/Email.png" alt="email button" />
+        </button>
+        <button class="imgButton">
+          <img src="imagens/Facebook.png" alt="facebook button" />
+        </button>
+        <button class="imgButton">
+          <img src="imagens/Whatsapp.png" alt="whatsapp button" />
+        </button>
+        <button class="imgButton">
+          <img src="imagens/Instagram.png" alt="instagram button" />
+        </button>
+        <button id="abrirCadastro1">Cadastrar-se</button>
+      </div>
+    </header>
+
+    <section>
+      <img src="imagens/VeiaNasNuve.png" alt="idosa nas nuvens" />
+      <div>
+        <h3>Sobre nós</h3>
+        <p>
+          A KitByte tem o propósito de ajudar pessoas com problemas no básico de
+          tecnologia. Com lições curtinhas e divertidas, você vai aprendendo e
+          desbloqueando novas lições que te ajudam no seu dia a dia. Para
+          aproveitar mais do nosso app cadastre-se aqui.
+        </p>
+        <button id="abrirCadastro2">Cadastrar-se</button>
+      </div>
+    </section>
+    <div id="nuvem"></div>
+    <section>
+      <div>
+        <div id="textinho">
+          <h3>Nosso aplicativo</h3>
+          <p>
+            Olá! quer ter uma experiência vmais incrível ainda no nosso app?
+            Veja esse vídeo rapidinho para que tenha a melhor experiência
+            conosco
+          </p>
+        </div>
+        <video width="400" controls poster="imagens/thumbnail.png">
+          <source src="Kitbyte.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div id="passaros"></div>
+      <div id="celularesDiv">
+        <div id="textinho">
+          <h3>Exemplos</h3>
+          <p>
+            Como vai? Aqui vão mais alguns exemplos de como nosso aplicativo
+            pode te ajudar a melhorar cada vez mais com tudo que você precisa!
+          </p>
+        </div>
+        <div id="celulares">
+          <img class="celular" src="imagens/Celular (3).png" alt="Celular" />
+          <img class="celular" src="imagens/Celular (4).png" alt="Celular" />
+          <img class="celular" src="imagens/Celular (5).png" alt="Celular" />
+        </div>
+      </div>
+      <div id="praia">
+        <img src="imagens/Praia.png" alt="praia" id="praiaImg" />
+        <div id="carrinho">
+          <img src="imagens/carrinho.png" alt="carrinho" />
+        </div>
+      </div>
+    </section>
+    <footer>
+      <!-- coisas de footer -->
+    </footer>
+    <div id="scrollArrow"></div>
+    <div id="fundo">
+      <div id="cadastro">
+        <div id="headerCadastro">
+          <div>
+            <img id="cadastroLogo" src="imagens/kit logo.png" alt="LOGO" />
+            <h3>Cadastro</h3>
+          </div>
+          <div id="fecharCadastro">
+            <div id="div1"></div>
+            <div id="div2"></div>
+          </div>
+        </div>
+        <form action="#">
+          <div>
+            <label for="nomeReal">nome real</label>
+            <input
+              required
+              type="text"
+              name="nomeReal"
+              id="nomeReal"
+              placeholder="Fulano da Silva"
+            />
+          </div>
+          <div>
+            <label for="nickname">nickname</label>
+            <input
+              required
+              type="text"
+              name="nickname"
+              id="nickname"
+              placeholder="fulaninho123"
+            />
+          </div>
+          <div>
+            <label for="dataNasc">data de nascimento</label>
+            <input required type="date" name="dataNasc" id="dataNasc" />
+          </div>
+          <div>
+            <label for="email">email</label>
+            <input
+              required
+              type="email"
+              name="email"
+              id="email"
+              placeholder="exemplo@gmail.com"
+            />
+            <p id="errorEmail">Digite um email válido</p>
+          </div>
+          <div>
+            <label for="senha">senha</label>
+            <span>
+              <input required type="password" name="senha" id="senha" />
+              <img
+                id="olho1"
+                src="imagens/eye-slash-solid.svg"
+                alt="alterar visibilidade da senha"
+              />
+            </span>
+            <p id="errorSenha">Insira uma senha</p>
+          </div>
+          <div>
+            <label for="repetirSenha">repetir senha</label>
+            <span>
+              <input
+                required
+                type="password"
+                name="repetirSenha"
+                id="repetirSenha"
+              />
+              <img
+                id="olho2"
+                src="imagens/eye-slash-solid.svg"
+                alt="alterar visibilidade da senha"
+              />
+            </span>
+            <p id="errorRepetirSenha">Insira uma senha correspondente</p>
+          </div>
+          <input id="cadastrar" type="submit" value="Cadastrar-se" disabled />
+        </form>
+      </div>
+    </div>
+    <div id="fundo2">
+      <div id="errCadastro">
+        <img src="imagens/sadKit.png" alt="kit logo" />
+        <h1>
+          Usuário já cadastrado <br />
+          Tente novamente
+        </h1>
+        <button id="errCadastroButton">Voltar</button>
+      </div>
+    </div>
+  </body>
+</html>
